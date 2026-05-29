@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bibliotec.Models
 {
-    public class Cateogria
+    public class Categoria
     {
         [Key]
         public int Id { get; set; }

@@ -30,11 +30,18 @@ namespace Bibliotec.Controllers
 
                 HttpContext.Session.SetString("Admin", usuario.TipoBib.ToString());
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Livro");
             }
             
             ViewBag.Erro = "Usuário ou senha inválidos";
             return View("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Deslogar()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
         }
     }
 }

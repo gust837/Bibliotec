@@ -9,9 +9,9 @@ namespace Bibliotec.Contexts
             
         public DbSet<Usuario> Usuario { get; set; } =null!;
 
-        public DbSet<Cateogria> Categoria { get; set; } =null!;
+        public DbSet<Categoria> Categoria { get; set; } =null!;
 
-        public DbSet<Cateogria> Livro { get; set; } =null!;
+        public DbSet<Livro> Livro { get; set; } =null!;
 
         public DbSet<LivroCategoria> LivroCategoria { get; set; } =null!;
 
@@ -22,4 +22,5 @@ namespace Bibliotec.Contexts
             modelBuilder.Entity<LivroCategoria>().HasKey(lc => new {lc.LivroId, lc.CategoriaId});
         }
     }
+
 }
